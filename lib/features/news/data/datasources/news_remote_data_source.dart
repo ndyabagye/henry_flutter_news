@@ -39,7 +39,7 @@ class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
           return news;
         case 400:
           throw const ServerException(message: "Bad request");
-        case 410:
+        case 401:
           throw const ServerException(message: "Unauthorized");
         case 500:
           throw const ServerException(message: "Internal Server error");
